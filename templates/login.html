@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Online Train Ticket Reservation</title>
+  <style media="screen">
+    body {
+      background-color: #864aad;
+      margin: 130px 430px ;
+      
+    }
+
+    form {
+      display: "inline-block";
+      height: 500px;
+      border-style: groove;
+      border-color: orange;
+      background-color: #FFFFE0;
+      padding: 40px;
+    }
+    .inputin{
+        border: 2px solid red;
+        border-radius: 2 rem;
+        padding: 82px 52px;
+    }
+    input{
+        margin: 12px 12px;
+        font-size: 16px;
+    }
+    /* USING CSS PSEUDO SELECTORS FOR CONSTRAINED VALIDATION */
+    input:invalid {
+      box-shadow: 0 0 5px 1px red;
+    }
+
+    input:valid {
+      border: 2px solid black;
+    }
+    input:focus{
+        padding: 5px;
+    }
+    #subm1{
+      width: 30%;
+      height: 30px;
+      margin: 30px 30px;
+     
+      
+    }
+    #subm1:hover{
+      border: 2px solid red;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <table cellspacing="15">
+    <tr>
+      
+      <td>
+        <form class="c1" action="index" method="post"> {% csrf_token %}
+          <h1>Kindly fill the Login Credentials for proceeding further</h1> <br>
+          <div class="inputin">
+            Email: <input type="email" id="e1" value="" required> <br> <br>
+            Password : <input type="password" name="" value="" id="p1" required> <br> <br>
+            <button  type="submit" id="subm1">Submit</button>
+          </div>
+        </form>
+      </td>
+    </tr>
+  </table>
+</body>
+
+</html>
